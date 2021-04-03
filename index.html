@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Range slider glassmorphism</title>
+		<link href="./style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<section>
+			<span id="one"></span>
+			<span id="two"></span>
+			<span id="three"></span>
+			<span id="four"></span>
+			<h2 id="label">0</h2>
+			<input id="range" type="range" value="0" min="0" max="100" onchange="range(this)" onmousemove="range(this)" />
+		</section>
+		<script>
+			function range(e) {
+				document.getElementById('label').innerHTML = e.value;
+			}
+		</script>
+	</body>
+</html>

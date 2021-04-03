@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+	margin: 0;
+	outline: none;
+	font-family: Poppins;
+}
+
+section {
+	position: relative;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #151515;
+	z-index: 1;
+}
+
+#label {
+	font-size: 30vh;
+	font-weight: 800;
+	color: #22ff08;
+}
+
+#label:after {
+	content: '%';
+}
+
+#range {
+	position: relative;
+	width: 70%;
+	height: 30px;
+	background-color: rgba(0, 0, 0, 0.8);
+	appearance: none;
+	-webkit-appearance: none;
+	border: 2px solid #000;
+	border-radius: 30px;
+	box-shadow: 0 0 0 2px #151515, inset 0 0 5px #000;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#range::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	background-color: #22ff08;
+	border: 10px solid #222;
+	border-radius: 50%;
+	box-shadow: -1015px 0 0 1000px #22ff08;
+	cursor: pointer;
+}
+
+/*#label {
+	animation-duration: 30s;
+	animation-name: colors;
+	animation-iteration-count: infinite;
+}*/
+
+@keyframes colors {
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+
+section span {
+	position: fixed;
+	width: 50vw;
+	height: 50vh;
+	background-color: rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(15px);
+	border: 0 solid rgba(255, 255, 255, 0.08);
+	z-index: 2;
+}
+
+#one {
+	top: 0;
+	left: 0vw;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+}
+
+#two {
+	top: 0;
+	right: 0;
+	border-left-width: 1px;
+	border-bottom-width: 1px;
+}
+
+#three {
+	bottom: 0;
+	right: 0;
+	border-left-width: 1px;
+	border-top-width: 1px;
+}
+
+#four {
+	bottom: 0;
+	left: 0;
+	border-right-width: 1px;
+	border-top-width: 1px;
+}
